@@ -10,7 +10,7 @@ export default function App() {
         <footer>
           This project was coded by Jennifer Lifsey and is{" "}
           <a
-            href="https://github.com/jlifs/react-weather-forecast-app"
+            href="https://github.com/jlifs/jlifs-react-weather-app"
             target="_blank"
           >
             open-sourced on GitHub
