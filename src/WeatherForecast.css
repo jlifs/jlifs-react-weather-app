@@ -1,5 +1,10 @@
 .WeatherForecast {
     text-align: center;
+    color: red;
+  }
+
+  .WeatherForecast-day {
+    color: gray;
   }
   
   .WeatherForecast-temperature-min {
