@@ -1,0 +1,8 @@
+.WeatherInfo {
+    margin-top: 20px;
+  }
+  
+  .WeatherInfo .temperature-container {
+    margin-top: 20px;
+    height: 70px;
+  }

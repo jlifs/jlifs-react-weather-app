@@ -11,6 +11,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
@@ -45,12 +46,12 @@ export default function Weather(props) {
               <input
                 type="search"
                 placeholder="Enter a city.."
-                className="form-control"
+                className="form-control search-input"
                 autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3 p-0">
               <input
                 type="submit"
                 value="Search"
@@ -60,7 +61,32 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast city={weatherData.city} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
+
+        <footer>
+          This project was coded by{" "}
+          <a href="https://github.com/jlifs" target="_blank" rel="noreferrer">
+            {" "}
+            Jennifer Lifsey{" "}
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/jlifs/jlifs-react-weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-sourced on GitHub{" "}
+          </a>
+          and{" "}
+          <a
+            href="https://subtle-boba-2cf4a3.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            hosted on Netlify
+          </a>
+        </footer>
+        
       </div>
     );
   } else {
