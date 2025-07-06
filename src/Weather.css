@@ -121,3 +121,7 @@
   color: #2e94b9;
   text-decoration: none;
 }
+
+.Weather footer a:hover {
+  text-decoration: underline;
+}
